@@ -187,7 +187,8 @@ export default function AuthPage() {
         const data = await response.json()
 
         if (response.ok) {
-          window.location.href = "https://traderoom.nextradeglobal.io/auth/external/" + data.data.token // Redireciona para a página de login após o registro
+          console.log(data)
+          //window.location.href = "https://traderoom.nextradeglobal.io/auth/external/" + data.data.token // Redireciona para a página de login após o registro
           console.log("Registration successful:", data)
           // TODO: Handle successful registration (e.g., show success message, redirect)
         } else {
@@ -240,7 +241,8 @@ export default function AuthPage() {
       console.log("Login response data:", data); // Log dos dados da resposta
 
       if (response.ok) {
-        window.location.href = data.data.url_access;
+        console.log(data)
+        //window.location.href = data.data.url_access;
         console.log("Login successful:", data)
         // TODO: Handle successful login (e.g., store token, redirect)
       } else {
