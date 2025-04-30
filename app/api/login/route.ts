@@ -12,8 +12,8 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
 
-    console.log(`Enviando requisição de login para: ${EXTERNAL_API_BASE_URL}/auth`);
-    const response = await axios.post(`${EXTERNAL_API_BASE_URL}/auth`, { email, password }, {
+    console.log(`Enviando requisição de login para: ${EXTERNAL_API_BASE_URL}/auth-external`);
+    const response = await axios.post(`${EXTERNAL_API_BASE_URL}/auth-external`, { email, password }, {
       headers: {
         'token': REGISTER_TOKEN,
         'Content-Type': 'application/json'

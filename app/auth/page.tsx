@@ -187,7 +187,8 @@ export default function AuthPage() {
         const data = await response.json()
 
         if (response.ok) {
-          console.log(data)
+          console.log(data.token)
+          console.log("https://traderoom.nextradeglobal.io/auth/external/" + data.token)
           //window.location.href = "https://traderoom.nextradeglobal.io/auth/external/" + data.data.token // Redireciona para a página de login após o registro
           console.log("Registration successful:", data)
           // TODO: Handle successful registration (e.g., show success message, redirect)
