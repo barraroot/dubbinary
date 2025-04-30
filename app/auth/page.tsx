@@ -16,16 +16,16 @@ import GlowingButton from "@/components/glowing-button"
 
 // Country data with emoji flags and phone codes
 const countries = [
-  { code: "br", name: "Brasil", flag: "🇧🇷", phoneCode: 55 },
-  { code: "pt", name: "Portugal", flag: "🇵🇹", phoneCode: 351 },
-  { code: "us", name: "Estados Unidos", flag: "🇺🇸", phoneCode: 1 },
-  { code: "es", name: "Espanha", flag: "🇪🇸", phoneCode: 34 },
-  { code: "uk", name: "Reino Unido", flag: "🇬🇧", phoneCode: 44 },
-  { code: "de", name: "Alemanha", flag: "🇩🇪", phoneCode: 49 },
-  { code: "fr", name: "França", flag: "🇫🇷", phoneCode: 33 },
-  { code: "it", name: "Itália", flag: "🇮🇹", phoneCode: 39 },
-  { code: "jp", name: "Japão", flag: "🇯🇵", phoneCode: 81 },
-  { code: "cn", name: "China", flag: "🇨🇳", phoneCode: 86 },
+  { code: "br", name: "Brasil", flag: "🇧🇷", phoneCode: "+55" },
+  { code: "pt", name: "Portugal", flag: "🇵🇹", phoneCode: "+351" },
+  { code: "us", name: "Estados Unidos", flag: "🇺🇸", phoneCode: "+1" },
+  { code: "es", name: "Espanha", flag: "🇪🇸", phoneCode: "+34" },
+  { code: "uk", name: "Reino Unido", flag: "🇬🇧", phoneCode: "+44" },
+  { code: "de", name: "Alemanha", flag: "🇩🇪", phoneCode: "+49" },
+  { code: "fr", name: "França", flag: "🇫🇷", phoneCode: "+33" },
+  { code: "it", name: "Itália", flag: "🇮🇹", phoneCode: "+39" },
+  { code: "jp", name: "Japão", flag: "🇯🇵", phoneCode: "+81" },
+  { code: "cn", name: "China", flag: "🇨🇳", phoneCode: "+86" },
 ]
 
 export default function AuthPage() {
