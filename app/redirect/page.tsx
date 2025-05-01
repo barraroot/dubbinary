@@ -93,10 +93,9 @@ export default function RedirectPage() {
         >
           <p>Este conteúdo está em português apenas para fins informativos.</p>
           <p>
-            Você está acessando uma plataforma internacional voltada a traders que operam em regiões onde sua atividade
-            é compatível com as normas locais.
+            Você está acessando uma plataforma internacional destinada a traders que atuam em locais onde essa atividade esteja em conformidade com a legislação vigente.
           </p>
-          <p>Ao prosseguir, você confirma estar ciente dessas condições e decide continuar por vontade própria.</p>
+          <p>Ao avançar, você declara ter ciência dessas condições e opta por prosseguir por sua livre iniciativa.</p>
         </motion.div>
       </div>
 
