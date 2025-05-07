@@ -12,8 +12,8 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
 
-    console.log(`Enviando requisição de login para: ${EXTERNAL_API_BASE_URL}/auth-external`);
-    const response = await axios.post(`${EXTERNAL_API_BASE_URL}/auth-external`, { email, password }, {
+    console.log(`Enviando requisição de login para: ${EXTERNAL_API_BASE_URL}/auth`);
+    const response = await axios.post(`${EXTERNAL_API_BASE_URL}/auth`, { email, password }, {
       headers: {
         'token': REGISTER_TOKEN,
         'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
     if (error.response) {
       // Erro com resposta da API externa
       return NextResponse.json({
-        message: 'Erro na comunicação com a API externa.',
+        message: error.response.data.message === "invalid credentials" ? 'E-mail ou senha invalidos' : 'Erro na comunicação com a API externa.',
         errorDetails: error.response.data
       }, { status: error.response.status || 500 });
     } else if (error.request) {

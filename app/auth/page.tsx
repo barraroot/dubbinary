@@ -191,20 +191,43 @@ export default function AuthPage() {
           console.log("Registration successful:", data)
           // TODO: Handle successful registration (e.g., show success message, redirect)
         } else {
-          console.error("Registration failed:", data)
+          //console.log("Registration failed:", data.errorDetails.errors)
           // TODO: Handle registration errors (e.g., display error messages from API)
-          if (data.errors) {
-            const apiErrors: Record<string, string> = {};
-            for (const key in data.errors) {
-              if (data.errors[key] && data.errors[key].length > 0) {
-                // Assuming the API returns an array of error messages for each field
-                apiErrors[key] = data.errors[key][0];
+          if(data.error) {
+            setErrors(prevErrors => ({ ...prevErrors, general: data.error }));
+          } else {
+            if (data.errorDetails.errors) {
+              const apiErrors: Record<string, string> = {};
+              for (const key in data.errorDetails.errors) {
+                console.log(key)
+                if(key === "email") {
+                  if(data.errorDetails.errors[key][0] == 'validation.unique') {
+                    apiErrors.registerEmail = "Esse e-mail já está em uso. Tente outro.";
+                  } else {
+                    apiErrors.registerEmail = data.errorDetails.errors[key][0];
+                  }
+                }
+                if(key === "password") {
+                  if(data.errorDetails.errors[key][0] == 'validation.min.string') {
+                    apiErrors.registerPassword = "A senha deve ter pelo menos 8 caracteres.";
+                  } else if(data.errorDetails.errors[key][0] == 'validation.regex') {
+                    apiErrors.registerPassword = "A senha deve conter pelo menos uma letra maiúscula, uma letra minúscula e um número.";
+                  } else {
+                    apiErrors.registerPassword = data.errorDetails.errors[key][0];
+                  }
+                }
+                /*
+                if (data.errorDetails.errors[key] && data.errorDetails.errors[key].length > 0) {
+                  // Assuming the API returns an array of error messages for each field
+                  apiErrors[key] = data.errorDetails.errors[key][0];
+                }
+                */
               }
+              setErrors(prevErrors => ({ ...prevErrors, ...apiErrors }));
+            } else if (data.message) {
+               // Handle general error message
+               setErrors(prevErrors => ({ ...prevErrors, general: data.message }));
             }
-            setErrors(prevErrors => ({ ...prevErrors, ...apiErrors }));
-          } else if (data.message) {
-             // Handle general error message
-             setErrors(prevErrors => ({ ...prevErrors, general: data.message }));
           }
         }
       } catch (error) {
@@ -247,8 +270,8 @@ export default function AuthPage() {
       } else {
         console.error("Login failed:", data)
         // TODO: Handle login errors (e.g., display error message)
-         if (data && data.message) { // Verifica se data e data.message existem
-             setErrors(prevErrors => ({ ...prevErrors, general: data.message }));
+         if (data && data.errorDetails) { // Verifica se data e data.message existem
+             setErrors(prevErrors => ({ ...prevErrors, general: data.errorDetails.message }));
           } else {
              setErrors(prevErrors => ({ ...prevErrors, general: "Ocorreu um erro ao tentar fazer login. Verifique suas credenciais." }));
           }
