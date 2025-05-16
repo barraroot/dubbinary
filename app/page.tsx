@@ -197,7 +197,7 @@ export default function Home() {
       name: "Carlos Mendes",
       role: "Investidor Profissional",
       content:
-        "A NexTrade revolucionou minha forma de investir. A velocidade de execução e as ferramentas de análise são incomparáveis no mercado brasileiro.",
+        "A BudBinary revolucionou minha forma de investir. A velocidade de execução e as ferramentas de análise são incomparáveis no mercado brasileiro.",
       rating: 5,
     },
     {
@@ -205,7 +205,7 @@ export default function Home() {
       name: "Ana Ramos",
       role: "Day Trader",
       content:
-        "Depois de testar várias plataformas, a NexTrade é definitivamente superior. O suporte ao cliente é excepcional e a interface é intuitiva mesmo para operações complexas.",
+        "Depois de testar várias plataformas, a BudBinary é definitivamente superior. O suporte ao cliente é excepcional e a interface é intuitiva mesmo para operações complexas.",
       rating: 5,
     },
     {
@@ -213,7 +213,7 @@ export default function Home() {
       name: "Roberto Fayad",
       role: "Gestor de Patrimônio",
       content:
-        "Recomendo a NexTrade para todos os meus clientes. A segurança e a diversidade de ativos disponíveis tornam a plataforma ideal para qualquer perfil de investidor.",
+        "Recomendo a BudBinary para todos os meus clientes. A segurança e a diversidade de ativos disponíveis tornam a plataforma ideal para qualquer perfil de investidor.",
       rating: 5,
     },
   ]
@@ -252,9 +252,9 @@ export default function Home() {
             <div className="flex items-center gap-2">
               <Link href="/" className="flex items-center gap-2">
                 <motion.div whileHover={{ rotate: 10 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-                  <Image src="/icone-nextrade-azul.png" alt="NexTrade" width={32} height={32} className="h-8 w-auto" />
+                  <Image src="/icone-nextrade-azul.png" alt="BudBinary" width={32} height={32} className="h-8 w-auto" />
                 </motion.div>
-                <Image src="/logotipo_dolbbinari.png" alt="NexTrade" width={180} height={36} className="h-10 w-auto" />
+                <Image src="/logotipo_dolbbinari.png" alt="BudBinary" width={180} height={36} className="h-10 w-auto" />
               </Link>
             </div>
 
@@ -342,8 +342,8 @@ export default function Home() {
             >
               <div className="flex justify-between items-center mb-8">
                 <Link href="/" className="flex items-center gap-2">
-                  <Image src="/icone-nextrade-azul.png" alt="NexTrade" width={32} height={32} className="h-8 w-auto" />
-                  <Image src="/logotipo_dolbbinari.png" alt="NexTrade" width={120} height={24} className="h-6 w-auto" />
+                  <Image src="/icone-BudBinary-azul.png" alt="BudBinary" width={32} height={32} className="h-8 w-auto" />
+                  <Image src="/logotipo_dolbbinari.png" alt="BudBinary" width={120} height={24} className="h-6 w-auto" />
                 </Link>
                 <button className="p-2 text-gray-700 dark:text-gray-300" onClick={() => setMobileMenuOpen(false)}>
                   <X className="h-6 w-6" />
@@ -455,7 +455,7 @@ export default function Home() {
                   </GlowingButton>
 
                   <Button variant="outline" size="lg" className="group" asChild>
-                    <a href="https://t.me/NexTradeSupportBot?start=w38740082" target="_blank" rel="noopener noreferrer">
+                    <a href="https://t.me/BudBinarySupportBot?start=w38740082" target="_blank" rel="noopener noreferrer">
                       <span>Agendar demonstração</span>
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </a>
@@ -472,8 +472,8 @@ export default function Home() {
               >
                 <div className="relative rounded-xl overflow-hidden shadow-2xl bg-gray-900">
                   <Image
-                    src="/nextrade-traderoom.png"
-                    alt="NexTrade Trading Room"
+                    src="/BudBinary-traderoom.png"
+                    alt="BudBinary Trading Room"
                     width={1200}
                     height={800}
                     className="w-full h-auto"
@@ -572,7 +572,7 @@ export default function Home() {
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
                   Parceiros e integrações confiáveis
                 </h2>
-                <p className="text-gray-600 dark:text-gray-300">Invista nas maiores empresas do mundo com a NexTrade</p>
+                <p className="text-gray-600 dark:text-gray-300">Invista nas maiores empresas do mundo com a BudBinary</p>
               </motion.div>
 
               {/* Carousel de logos com scroll automático */}
@@ -802,7 +802,7 @@ export default function Home() {
                   <div className="relative z-10 rounded-xl overflow-hidden shadow-xl">
                     <Image
                       src="/mobile-app.png"
-                      alt="NexTrade Mobile App"
+                      alt="BudBinary Mobile App"
                       width={500}
                       height={600}
                       className="w-full h-auto"
@@ -832,7 +832,7 @@ export default function Home() {
                   O que nossos clientes dizem
                 </motion.h2>
                 <motion.p className="text-lg text-gray-600 dark:text-gray-300" variants={fadeInUp}>
-                  Milhares de investidores já transformaram sua experiência de investimento com a NexTrade.
+                  Milhares de investidores já transformaram sua experiência de investimento com a BudBinary.
                 </motion.p>
               </motion.div>
 
@@ -864,7 +864,7 @@ export default function Home() {
                   Comece sua jornada de investimentos hoje
                 </motion.h2>
                 <motion.p className="text-lg md:text-xl text-blue-100 mb-10" variants={fadeInUp}>
-                  Junte-se a milhares de investidores que já estão transformando seu futuro financeiro com a NexTrade.
+                  Junte-se a milhares de investidores que já estão transformando seu futuro financeiro com a BudBinary.
                 </motion.p>
 
                 <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={fadeInUp}>
@@ -875,7 +875,7 @@ export default function Home() {
                   </GlowingButton>
 
                   <Button variant="outline" size="lg" className="border-white text-black hover:bg-white/10" asChild>
-                    <a href="https://t.me/NexTradeSupportBot?start=w38740082" target="_blank" rel="noopener noreferrer">
+                    <a href="https://t.me/BudBinarySupportBot?start=w38740082" target="_blank" rel="noopener noreferrer">
                       Falar com um especialista
                     </a>
                   </Button>
