@@ -60,10 +60,10 @@ const config = {
           300: "#8faad3",
           400: "#5d88c0",
           500: "#5dade2", // Azul claro da paleta (#5dade2)
-          600: "#2c5cad",
+          600: "#6732FF",
           700: "#254b8f",
           800: "#082241", // Azul marinho da paleta (#082241)
-          900: "#003164", // Azul escuro da paleta (#003164)
+          900: "#3f3f3f", // Azul escuro da paleta (#003164)
           950: "#1e4fac", // Nova cor de botão azul
         },
         gray: {

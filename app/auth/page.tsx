@@ -287,7 +287,7 @@ export default function AuthPage() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-950 p-6">
       <div className="w-full max-w-md flex flex-col items-center">
         <div className="flex justify-center mb-8 w-full">
-          <Image src="/logo-nextrade-preto.png" alt="NexTrade" width={200} height={50} className="h-12 w-auto" />
+          <Image src="/logotipo_dolbbinari.png" alt="NexTrade" width={200} height={50} className="h-12 w-auto" />
         </div>
 
         <motion.div

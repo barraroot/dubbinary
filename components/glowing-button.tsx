@@ -26,7 +26,7 @@ export default function GlowingButton({ children, className, size = "default", a
           repeatType: "reverse",
         }}
       />
-      <Button size={size} className={cn("relative bg-[#1e4fac] hover:bg-[#1a45a0] text-white", className)} asChild={asChild}>
+      <Button size={size} className={cn("relative bg-[#6732FF] hover:bg-[#6732FF] text-white", className)} asChild={asChild}>
         {children}
       </Button>
     </div>

@@ -254,7 +254,7 @@ export default function Home() {
                 <motion.div whileHover={{ rotate: 10 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
                   <Image src="/icone-nextrade-azul.png" alt="NexTrade" width={32} height={32} className="h-8 w-auto" />
                 </motion.div>
-                <Image src="/logo-nextrade-preto.png" alt="NexTrade" width={180} height={36} className="h-10 w-auto" />
+                <Image src="/logotipo_dolbbinari.png" alt="NexTrade" width={180} height={36} className="h-10 w-auto" />
               </Link>
             </div>
 
@@ -343,7 +343,7 @@ export default function Home() {
               <div className="flex justify-between items-center mb-8">
                 <Link href="/" className="flex items-center gap-2">
                   <Image src="/icone-nextrade-azul.png" alt="NexTrade" width={32} height={32} className="h-8 w-auto" />
-                  <Image src="/logo-nextrade-preto.png" alt="NexTrade" width={120} height={24} className="h-6 w-auto" />
+                  <Image src="/logotipo_dolbbinari.png" alt="NexTrade" width={120} height={24} className="h-6 w-auto" />
                 </Link>
                 <button className="p-2 text-gray-700 dark:text-gray-300" onClick={() => setMobileMenuOpen(false)}>
                   <X className="h-6 w-6" />
@@ -786,7 +786,7 @@ export default function Home() {
                   </motion.div>
 
                   <motion.div className="mt-10" variants={fadeInLeft}>
-                    <Button className="group bg-[#1e4fac] hover:bg-[#1a45a0]" size="lg">
+                    <Button className="group bg-[#6732FF] hover:bg-[#6732FF]" size="lg">
                       <span>Explorar a plataforma</span>
                       <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </Button>

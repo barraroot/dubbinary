@@ -154,7 +154,7 @@ export default function MobileFallback() {
             <motion.div whileHover={{ rotate: 10 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
               <Image src="/icone-nextrade-azul.png" alt="NexTrade" width={28} height={28} className="h-7 w-auto" />
             </motion.div>
-            <Image src="/logo-nextrade-preto.png" alt="NexTrade" width={120} height={24} className="h-6 w-auto dark:hidden" />
+            <Image src="/logotipo_dolbbinari.png" alt="NexTrade" width={120} height={24} className="h-6 w-auto dark:hidden" />
             <Image src="/logo-nextrade-branco.png" alt="NexTrade" width={120} height={24} className="h-6 w-auto hidden dark:block" />
           </Link>
           <motion.button
@@ -180,7 +180,7 @@ export default function MobileFallback() {
             <div className="flex justify-between items-center mb-8">
               <Link href="/" className="flex items-center gap-2">
                 <Image src="/icone-nextrade-azul.png" alt="NexTrade" width={28} height={28} className="h-7 w-auto" />
-                <Image src="/logo-nextrade-preto.png" alt="NexTrade" width={120} height={24} className="h-6 w-auto dark:hidden" />
+                <Image src="/logotipo_dolbbinari.png" alt="NexTrade" width={120} height={24} className="h-6 w-auto dark:hidden" />
                 <Image src="/logo-nextrade-branco.png" alt="NexTrade" width={120} height={24} className="h-6 w-auto hidden dark:block" />
               </Link>
               <motion.button
