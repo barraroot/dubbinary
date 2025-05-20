@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Dub Binary - Plataforma de Investimentos",
+  title: "Apple Broker - Plataforma de Investimentos",
   description: "Invista em criptomoedas, ações internacionais, forex e mais de 200 ativos, de forma simples e segura.",
   generator: 'v0.dev'
 }
