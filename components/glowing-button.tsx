@@ -16,7 +16,7 @@ export default function GlowingButton({ children, className, size = "default", a
   return (
     <div className="relative group">
       <motion.div
-        className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg blur opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"
+        className="absolute -inset-0.5 bg-gradient-to-r to-blue-400 rounded-lg blur opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"
         animate={{
           backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
         }}
