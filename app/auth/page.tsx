@@ -287,7 +287,7 @@ export default function AuthPage() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-950 p-6">
       <div className="w-full max-w-md flex flex-col items-center">
         <div className="flex justify-center mb-8 w-full">
-          <Image src="/logotipo_dolbbinari.png" alt="BudBinary" width={200} height={50} className="h-12 w-auto" />
+          <Image src="applebroker/logo_dark.png" alt="Apple Broker" width={200} height={50} className="h-12 w-auto" />
         </div>
 
         <motion.div
@@ -329,9 +329,8 @@ export default function AuthPage() {
                   <div className="flex justify-between">
                     <Label htmlFor="password">Senha</Label>
                     <Link
-                      href="https://t.me/BudBinarySupportBot?start=w38740082"
+                      href="#"
                       className="text-xs text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-                      target="_blank"
                       rel="noopener noreferrer"
                     >
                       Esqueceu a senha?
@@ -655,9 +654,8 @@ export default function AuthPage() {
            <p className="text-sm text-gray-500 dark:text-gray-400">
              Precisa de ajuda?{" "}
              <a
-               href="https://t.me/BudBinarySupportBot?start=w38740082"
+               href="#"
                className="text-blue-600 hover:underline dark:text-blue-400"
-               target="_blank"
                rel="noopener noreferrer"
              >
                Fale com o suporte
@@ -666,7 +664,7 @@ export default function AuthPage() {
          </div>
        </div>
        <div className="mt-6 text-center text-xs text-gray-500 dark:text-gray-400 w-full">
-         © {new Date().getFullYear()} BudBinary. Todos os direitos reservados.
+         © {new Date().getFullYear()} Apple Broker. Todos os direitos reservados.
        </div>
      </div>
    )

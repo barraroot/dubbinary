@@ -60,7 +60,7 @@ const config = {
           300: "#8faad3",
           400: "#5d88c0",
           500: "#5dade2", // Azul claro da paleta (#5dade2)
-          600: "#6732FF",
+          600: "#6bb67a",
           700: "#254b8f",
           800: "#082241", // Azul marinho da paleta (#082241)
           900: "#3f3f3f", // Azul escuro da paleta (#003164)
