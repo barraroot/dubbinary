@@ -306,14 +306,14 @@ export default function Home() {
               <div className="hidden md:flex items-center">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button variant="outline" className="mr-2" asChild>
-                    <a href="/redirect?to=auth&hash=login">
+                    <a href="https://traderoom.asafebroker.com/auth">
                       Entrar
                     </a>
                   </Button>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <GlowingButton asChild>
-                    <a href="/redirect?to=auth&hash=register">
+                    <a href="https://traderoom.asafebroker.com/auth/register">
                       Criar conta grátis
                     </a>
                   </GlowingButton>
@@ -379,7 +379,7 @@ export default function Home() {
 
               <div className="mt-auto flex flex-col gap-4">
                 <Button variant="outline" className="w-full" asChild onClick={() => setMobileMenuOpen(false)}>
-                  <a href="/redirect?to=auth&hash=login">
+                  <a href="https://traderoom.asafebroker.com/auth">
                     Entrar
                   </a>
                 </Button>
@@ -388,7 +388,7 @@ export default function Home() {
                   asChild
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <a href="/redirect?to=auth&hash=register">
+                  <a href="https://traderoom.asafebroker.com/auth/register">
                     Criar conta grátis
                   </a>
                 </Button>
@@ -445,7 +445,7 @@ export default function Home() {
                   transition={{ duration: 0.6, delay: 0.3 }}
                 >
                   <GlowingButton size="lg" asChild>
-                    <a href="/redirect?to=auth&hash=register">
+                    <a href="https://traderoom.asafebroker.com/auth/register">
                       Comece a investir agora
                     </a>
                   </GlowingButton>
@@ -865,7 +865,7 @@ export default function Home() {
 
                 <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={fadeInUp}>
                   <GlowingButton size="lg" asChild>
-                    <a href="/redirect?to=auth&hash=register">
+                    <a href="https://traderoom.asafebroker.com/auth/register">
                       Criar conta gratuita
                     </a>
                   </GlowingButton>
