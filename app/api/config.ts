@@ -1,3 +1,3 @@
 // Constantes da API externa
-export const EXTERNAL_API_BASE_URL = 'https://backoffice.applebroker.io/api/v1';
-export const REGISTER_TOKEN = 'dfb6c6a5-6889-4856-992e-df328a8ddf9a';
+export const EXTERNAL_API_BASE_URL = 'https://backoffice.asafebroker.com/api/v1';
+export const REGISTER_TOKEN = '514afe68-4685-4da1-86b7-dbe4c8e6a7a4';

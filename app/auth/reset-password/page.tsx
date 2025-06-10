@@ -28,7 +28,7 @@ export default function ResetPasswordPage() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-950 p-6">
       <div className="w-full max-w-md flex flex-col items-center">
         <div className="flex justify-center mb-8 w-full">
-          <Image src="/logotipo_dolbbinari.png" alt="Apple Broker" width={200} height={50} className="h-12 w-auto" />
+          <Image src="/logotipo_dolbbinari.png" alt="ASAFE Broker" width={200} height={50} className="h-12 w-auto" />
         </div>
 
         <motion.div
@@ -111,7 +111,7 @@ export default function ResetPasswordPage() {
           <p className="text-sm text-gray-500 dark:text-gray-400">
             Precisa de ajuda?{" "}
             <a
-              href="https://t.me/Apple BrokerSupportBot?start=w38740082"
+              href="https://t.me/ASAFE BrokerSupportBot?start=w38740082"
               className="text-blue-600 hover:underline dark:text-blue-400"
               target="_blank"
               rel="noopener noreferrer"
@@ -122,7 +122,7 @@ export default function ResetPasswordPage() {
         </div>
       </div>
       <div className="mt-6 text-center text-xs text-gray-500 dark:text-gray-400 w-full">
-        © {new Date().getFullYear()} Apple Broker. Todos os direitos reservados.
+        © {new Date().getFullYear()} ASAFE Broker. Todos os direitos reservados.
       </div>
     </div>
   )
