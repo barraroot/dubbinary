@@ -468,7 +468,7 @@ export default function Home() {
               >
                 <div className="relative rounded-xl overflow-hidden shadow-2xl bg-gray-900">
                   <Image
-                    src="applebroker/background.jpg"
+                    src="asafebroker/background.png"
                     alt="ASAFE Broker Trading Room"
                     width={1200}
                     height={800}

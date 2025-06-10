@@ -278,7 +278,7 @@ export default function MobileFallback() {
             {/* Trading Platform Image */}
             <div className="relative rounded-xl overflow-hidden shadow-xl bg-gray-900 mt-10">
               <Image
-                src="applebroker/background.jpg"
+                src="asafebroker/background.png"
                 alt="ASAFE Broker Trading Room"
                 width={1200}
                 height={800}
