@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
     
     console.log('Dados de registro após processamento:', userData);
     
-    const response = await axios.post(`${EXTERNAL_API_BASE_URL}/user-register`, userData, {
+    const response = await axios.post(`${EXTERNAL_API_BASE_URL}/v1/user-register`, userData, {
       headers: {
         'token': REGISTER_TOKEN,
         'Content-Type': 'application/json'

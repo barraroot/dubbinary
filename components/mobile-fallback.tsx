@@ -219,7 +219,7 @@ export default function MobileFallback() {
 
             <div className="mt-auto space-y-4">
               <Button variant="outline" className="w-full h-12 text-base" asChild>
-                <a href="https://traderoom.asafebroker.com/auth">
+                <a href="/redirect?to=auth">
                   Entrar
                 </a>
               </Button>
@@ -227,7 +227,7 @@ export default function MobileFallback() {
                 className="w-full h-12 text-base bg-[#2f3630] hover:bg-[#2f3630]"
                 asChild
               >
-                <a href="https://traderoom.asafebroker.com/auth/register">
+                <a href="/redirect?to=auth&hash=register">
                   Criar conta grátis
                 </a>
               </Button>
@@ -262,7 +262,7 @@ export default function MobileFallback() {
 
               <div className="flex flex-col gap-3">
                 <GlowingButton className="h-12 text-base">
-                  <a href="https://traderoom.asafebroker.com/auth/register">
+                  <a href="/redirect?to=auth&hash=register">
                     Comece a investir agora
                   </a>
                 </GlowingButton>
@@ -559,7 +559,7 @@ export default function MobileFallback() {
               Junte-se a milhares de investidores que já estão transformando seu futuro financeiro com a ASAFE Broker.
             </p>
             <GlowingButton className="w-full mb-3">
-              <a href="https://traderoom.asafebroker.com/auth/register">
+              <a href="/redirect?to=auth&hash=register">
                 Criar conta gratuita
               </a>
             </GlowingButton>

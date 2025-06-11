@@ -4,34 +4,44 @@ import { EXTERNAL_API_BASE_URL, REGISTER_TOKEN } from '../config';
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, password } = await request.json();
+    const userData = await request.json();
 
-    if (!email || !password) {
-      return NextResponse.json({
-        error: 'Os campos email e senha são obrigatórios'
+    // Validação básica
+    const requiredFields = [
+      'email'
+    ];
+    const missingFields = requiredFields.filter(field => !(field in userData));
+
+    if (missingFields.length > 0) {
+      return NextResponse.json({ 
+        error: 'Campos obrigatórios ausentes', 
+        missing: missingFields 
       }, { status: 400 });
     }
 
-    console.log(`Enviando requisição de login para: ${EXTERNAL_API_BASE_URL}/auth`);
-    const response = await axios.post(`${EXTERNAL_API_BASE_URL}/v1/auth`, { email, password }, {
+    console.log(`Enviando requisição de registro para: ${EXTERNAL_API_BASE_URL}/password-recovery`);
+        
+    console.log('Dados de registro após processamento:', userData);
+    
+    const response = await axios.post(`${EXTERNAL_API_BASE_URL}/password-recovery`, userData, {
       headers: {
         'token': REGISTER_TOKEN,
         'Content-Type': 'application/json'
       }
     });
-
-    console.log('Resposta da API externa (Login):', response.status, response.data);
+    
+    console.log('Resposta da API externa (Registro):', response.status, response.data);
     return NextResponse.json(response.data, { status: response.status });
 
   } catch (error: any) {
-    console.error('Erro ao chamar API externa (Login):', 
+    console.error('Erro ao chamar API externa (Registro):', 
       error.response ? error.response.data : error.message);
     
     // Tratamento de erros
     if (error.response) {
       // Erro com resposta da API externa
       return NextResponse.json({
-        message: error.response.data.message === "invalid credentials" ? 'E-mail ou senha invalidos' : 'Erro na comunicação com a API externa.',
+        message: 'Erro na comunicação com a API externa.',
         errorDetails: error.response.data
       }, { status: error.response.status || 500 });
     } else if (error.request) {
