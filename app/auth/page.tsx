@@ -194,7 +194,7 @@ export default function AuthPage() {
         const data = await response.json()
 
         if (response.ok) {
-          window.location.href = "/redirect?to=auth/external/" + data.token // Redireciona para a página de login após o registro
+          window.location.href = "https://traderoom.asafebroker.com/auth/external/" + data.token // Redireciona para a página de login após o registro
           console.log("Registration successful:", data)
           // TODO: Handle successful registration (e.g., show success message, redirect)
         } else {
