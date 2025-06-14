@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'As senhas não conferem' }, { status: 400 });
     }
 
-    console.log(`Enviando requisição de registro para: ${EXTERNAL_API_BASE_URL}/user-register`);
+    console.log(`Enviando requisição de registro para: ${EXTERNAL_API_BASE_URL}/v1/user-register`);
     
     // Converter o campo ddi para um número inteiro
     if (userData.ddi) {
