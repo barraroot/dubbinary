@@ -74,7 +74,7 @@ export default function MobileFallback() {
       name: "Carlos Mendes",
       role: "Investidor Profissional",
       content:
-        "A ASAFE Broker revolucionou minha forma de investir. A velocidade de execução e as ferramentas de análise são incomparáveis no mercado brasileiro.",
+        "A Apple Broker revolucionou minha forma de investir. A velocidade de execução e as ferramentas de análise são incomparáveis no mercado brasileiro.",
       rating: 5,
     },
     {
@@ -82,7 +82,7 @@ export default function MobileFallback() {
       name: "Ana Oliveira",
       role: "Day Trader",
       content:
-        "Depois de testar várias plataformas, a ASAFE Broker é definitivamente superior. O suporte ao cliente é excepcional e a interface é intuitiva mesmo para operações complexas.",
+        "Depois de testar várias plataformas, a Apple Broker é definitivamente superior. O suporte ao cliente é excepcional e a interface é intuitiva mesmo para operações complexas.",
       rating: 5,
     },
     {
@@ -90,7 +90,7 @@ export default function MobileFallback() {
       name: "Roberto Santos",
       role: "Gestor de Patrimônio",
       content:
-        "Recomendo a ASAFE Broker para todos os meus clientes. A segurança e a diversidade de ativos disponíveis tornam a plataforma ideal para qualquer perfil de investidor.",
+        "Recomendo a Apple Broker para todos os meus clientes. A segurança e a diversidade de ativos disponíveis tornam a plataforma ideal para qualquer perfil de investidor.",
       rating: 5,
     },
   ]
@@ -151,7 +151,7 @@ export default function MobileFallback() {
       >
         <div className="flex items-center justify-between px-5 h-16">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="asafebroker/logomodelado_inverted.png" alt="ASAFE Broker" width={120} height={24} className="h-6 w-auto dark:hidden" />
+            <Image src="applebroker/logo_dark.png" alt="Apple Broker" width={120} height={24} className="h-6 w-auto dark:hidden" />
           </Link>
           <motion.button
             className="p-2 text-gray-700 dark:text-gray-300 focus:outline-none rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -175,7 +175,7 @@ export default function MobileFallback() {
           >
             <div className="flex justify-between items-center mb-8">
               <Link href="/" className="flex items-center gap-2">
-                <Image src="asafebroker/logomodelado_inverted.png" alt="ASAFE Broker" width={28} height={28} className="h-7 w-auto" />
+                <Image src="applebroker/logo_dark.png" alt="Apple Broker" width={28} height={28} className="h-7 w-auto" />
               </Link>
               <motion.button
                 className="p-2 text-gray-700 dark:text-gray-300 focus:outline-none rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -219,12 +219,12 @@ export default function MobileFallback() {
 
             <div className="mt-auto space-y-4">
               <Button variant="outline" className="w-full h-12 text-base" asChild>
-                <a href="/redirect?to=auth">
+                <a href="/redirect?to=auth&hash=login">
                   Entrar
                 </a>
               </Button>
               <Button
-                className="w-full h-12 text-base bg-[#2f3630] hover:bg-[#2f3630]"
+                className="w-full h-12 text-base bg-[#6bb67a] hover:bg-[#6bb67a]"
                 asChild
               >
                 <a href="/redirect?to=auth&hash=register">
@@ -267,7 +267,7 @@ export default function MobileFallback() {
                   </a>
                 </GlowingButton>
                 <Button variant="outline" className="group h-12 text-base" asChild>
-                  <a href="https://t.me/ASAFE BrokerSupportBot?start=w38740082" target="_blank" rel="noopener noreferrer">
+                  <a href="https://t.me/Apple BrokerSupportBot?start=w38740082" target="_blank" rel="noopener noreferrer">
                     <span>Agendar demonstração</span>
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </a>
@@ -278,8 +278,8 @@ export default function MobileFallback() {
             {/* Trading Platform Image */}
             <div className="relative rounded-xl overflow-hidden shadow-xl bg-gray-900 mt-10">
               <Image
-                src="asafebroker/background.png"
-                alt="ASAFE Broker Trading Room"
+                src="applebroker/background.jpg"
+                alt="Apple Broker Trading Room"
                 width={1200}
                 height={800}
                 className="w-full h-auto"
@@ -500,7 +500,7 @@ export default function MobileFallback() {
           <div className="relative rounded-xl overflow-hidden shadow-lg mb-8">
             <Image
               src="/mobile-app.png"
-              alt="ASAFE Broker Mobile App"
+              alt="Apple Broker Mobile App"
               width={500}
               height={600}
               className="w-full h-auto"
@@ -508,7 +508,7 @@ export default function MobileFallback() {
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent pointer-events-none" />
           </div>
           
-          <Button className="w-full group bg-[#2f3630] hover:bg-[#2f3630]" size="lg">
+          <Button className="w-full group bg-[#6bb67a] hover:bg-[#6bb67a]" size="lg">
             <span>Explorar a plataforma</span>
             <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           </Button>
@@ -556,7 +556,7 @@ export default function MobileFallback() {
               Comece sua jornada de investimentos hoje
             </h2>
             <p className="text-blue-100 mb-6">
-              Junte-se a milhares de investidores que já estão transformando seu futuro financeiro com a ASAFE Broker.
+              Junte-se a milhares de investidores que já estão transformando seu futuro financeiro com a Apple Broker.
             </p>
             <GlowingButton className="w-full mb-3">
               <a href="/redirect?to=auth&hash=register">
@@ -564,7 +564,7 @@ export default function MobileFallback() {
               </a>
             </GlowingButton>
             <Button variant="outline" className="w-full border-white text-black hover:bg-white/10" asChild>
-              <a href="https://t.me/ASAFE BrokerSupportBot?start=w38740082" target="_blank" rel="noopener noreferrer">
+              <a href="https://t.me/Apple BrokerSupportBot?start=w38740082" target="_blank" rel="noopener noreferrer">
                 Falar com um especialista
               </a>
             </Button>
@@ -577,7 +577,7 @@ export default function MobileFallback() {
 
       <footer className="bg-gray-900 text-gray-400 py-8 px-5">
         <div className="flex items-center gap-2 mb-4">
-          <Image src="applebroker/logo_sem_fundo.png" alt="ASAFE Broker" width={120} height={24} className="h-6 w-auto" />
+          <Image src="applebroker/logo_sem_fundo.png" alt="Apple Broker" width={120} height={24} className="h-6 w-auto" />
         </div>
         <p className="text-xs mb-6">
           A plataforma de investimentos completa para você operar no mercado financeiro com segurança e agilidade.
@@ -615,7 +615,7 @@ export default function MobileFallback() {
         </div>
         
         <div className="border-t border-gray-800 pt-4 text-xs text-center">
-          <p>© {new Date().getFullYear()} ASAFE Broker. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Apple Broker. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>

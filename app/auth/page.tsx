@@ -35,13 +35,6 @@ export default function AuthPage() {
   const [showPassword, setShowPassword] = useState(false)
   const [activeTab, setActiveTab] = useState("login")
 
-  //Recovery Password
-  const [stateLoginForm, setStateFormLogin] = useState("login")
-  const [codeResetPassword, setCodeResetPassword] = useState("")
-  const [confirmPassword, setConfirmPassword] = useState("")
-
-
-
   // Register form state
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
@@ -194,7 +187,7 @@ export default function AuthPage() {
         const data = await response.json()
 
         if (response.ok) {
-          window.location.href = "/redirect?to=auth/external/" + data.token // Redireciona para a página de login após o registro
+          window.location.href = "https://traderoom.applebroker.io/auth/external/" + data.token // Redireciona para a página de login após o registro
           console.log("Registration successful:", data)
           // TODO: Handle successful registration (e.g., show success message, redirect)
         } else {
@@ -290,97 +283,11 @@ export default function AuthPage() {
     }
   }
 
-  const handlesendCodeSubmit = async(e: React.FormEvent) => {
-    e.preventDefault()
-    setErrors({}); // Limpa erros anteriores
-    console.log("Login attempt with:", { email })
-
-    const apiUrl = "/api/recovery-password" // Usando a rota de API local
-
-    try {
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email
-        }),
-      })
-
-      const data = await response.json()
-
-      console.log("Login response status:", response.status); // Log do status
-      console.log("Login response data:", data); // Log dos dados da resposta
-
-      if (response.ok) {
-        setStateFormLogin('reset-password');
-        // TODO: Handle successful login (e.g., store token, redirect)
-      } else {
-        console.error("Login failed:", data)
-        // TODO: Handle login errors (e.g., display error message)
-         if (data && data.errorDetails) { // Verifica se data e data.message existem
-             setErrors(prevErrors => ({ ...prevErrors, general: data.errorDetails.message }));
-          } else {
-             setErrors(prevErrors => ({ ...prevErrors, general: "Ocorreu um erro ao tentar fazer login. Verifique suas credenciais." }));
-          }
-      }
-    } catch (error) {
-      console.error("Error during login:", error)
-      // TODO: Handle network or other unexpected errors
-       setErrors(prevErrors => ({ ...prevErrors, general: "Ocorreu um erro ao tentar fazer login. Tente novamente." }));
-    }    
-  }
-
-  const handleResetPasswordSubmit = async(e: React.FormEvent) => {
-    e.preventDefault()
-    setErrors({}); // Limpa erros anteriores
-    console.log("Login attempt with:", { email })
-
-    const apiUrl = "/api/reset-password" // Usando a rota de API local
-
-    try {
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-          code: codeResetPassword
-        }),
-      })
-
-      const data = await response.json()
-
-      console.log("Login response status:", response.status); // Log do status
-      console.log("Login response data:", data); // Log dos dados da resposta
-
-      if (response.ok) {
-        setStateFormLogin('login');
-        // TODO: Handle successful login (e.g., store token, redirect)
-      } else {
-        console.error("Login failed:", data)
-        // TODO: Handle login errors (e.g., display error message)
-         if (data && data.errorDetails) { // Verifica se data e data.message existem
-             setErrors(prevErrors => ({ ...prevErrors, general: data.errorDetails.message }));
-          } else {
-             setErrors(prevErrors => ({ ...prevErrors, general: "Ocorreu um erro ao tentar fazer login. Verifique suas credenciais." }));
-          }
-      }
-    } catch (error) {
-      console.error("Error during login:", error)
-      // TODO: Handle network or other unexpected errors
-       setErrors(prevErrors => ({ ...prevErrors, general: "Ocorreu um erro ao tentar fazer login. Tente novamente." }));
-    } 
-  }  
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-950 p-6">
       <div className="w-full max-w-md flex flex-col items-center">
         <div className="flex justify-center mb-8 w-full">
-          <Image src="asafebroker/logomodelado_inverted.png" alt="ASAFE Broker" width={200} height={50} className="h-12 w-auto" />
+          <Image src="applebroker/logo_dark.png" alt="Apple Broker" width={200} height={50} className="h-12 w-auto" />
         </div>
 
         <motion.div
@@ -396,15 +303,12 @@ export default function AuthPage() {
             </TabsList>
 
             <TabsContent value="login">
-              
-              {stateLoginForm === 'login' ? (
-
               <form onSubmit={handleLoginSubmit} className="space-y-4">
-                {errors.general && (
-                  <div className="text-red-500 text-sm flex items-center">
-                    <AlertCircle className="h-4 w-4 mr-1" /> {errors.general}
-                  </div>
-                )}
+                 {errors.general && (
+                   <div className="text-red-500 text-sm flex items-center">
+                     <AlertCircle className="h-4 w-4 mr-1" /> {errors.general}
+                   </div>
+                 )}
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
                   <div className="relative">
@@ -428,7 +332,6 @@ export default function AuthPage() {
                       href="#"
                       className="text-xs text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
                       rel="noopener noreferrer"
-                      onClick={(e) => {e.preventDefault(); setStateFormLogin('send-code');}}
                     >
                       Esqueceu a senha?
                     </Link>
@@ -458,132 +361,6 @@ export default function AuthPage() {
                   <GlowingButton className="w-full">Entrar</GlowingButton>
                 </div>
               </form>
-
-              ) : stateLoginForm === 'send-code' ? (
-
-              <form onSubmit={handlesendCodeSubmit} className="space-y-4">
-                {errors.general && (
-                  <div className="text-red-500 text-sm flex items-center">
-                    <AlertCircle className="h-4 w-4 mr-1" /> {errors.general}
-                  </div>
-                )}
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="seu@email.com"
-                      className="pl-10"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="pt-2">
-                  <GlowingButton className="w-full">Enviar Código</GlowingButton>
-                </div>
-              </form>
-
-              ) : (
-
-              <form onSubmit={handleResetPasswordSubmit} className="space-y-4">
-                {errors.general && (
-                  <div className="text-red-500 text-sm flex items-center">
-                    <AlertCircle className="h-4 w-4 mr-1" /> {errors.general}
-                  </div>
-                )}
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="seu@email.com"
-                      className="pl-10"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="code">Código</Label>
-                  <div className="relative">
-                  <Input
-                        id="codeReset"
-                        type="text"
-                        placeholder="999-999-999"
-                        value={codeResetPassword}
-                        onChange={(e) => setCodeResetPassword(e.target.value)}
-                        required
-                        className="text-center"
-                      />
-                  </div>
-                </div>                
-                
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <Label htmlFor="password">Senha</Label>
-                  </div>
-                  <div className="relative">
-                    <Lock className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
-                    <Input
-                      id="password"
-                      type={showPassword ? "text" : "password"}
-                      placeholder="••••••••"
-                      className="pl-10"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-2.5 text-gray-400 hover:text-gray-600"
-                    >
-                      {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
-                    </button>
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <Label htmlFor="password">Confirma Senha</Label>
-                  </div>
-                  <div className="relative">
-                    <Lock className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
-                    <Input
-                      id="password"
-                      type={showPassword ? "text" : "password"}
-                      placeholder="••••••••"
-                      className="pl-10"
-                      value={confirmPassword}
-                      onChange={(e) => setConfirmPassword(e.target.value)}
-                      required
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-2.5 text-gray-400 hover:text-gray-600"
-                    >
-                      {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
-                    </button>
-                  </div>
-                </div>
-
-                <div className="pt-2">
-                  <GlowingButton className="w-full">Alterar Senha</GlowingButton>
-                </div>
-              </form>
-              
-              )}
-
             </TabsContent>
 
             <TabsContent value="register">
@@ -877,8 +654,7 @@ export default function AuthPage() {
            <p className="text-sm text-gray-500 dark:text-gray-400">
              Precisa de ajuda?{" "}
              <a
-               href="https://w.app/suporteasafe"
-               target="_blank"
+               href="#"
                className="text-blue-600 hover:underline dark:text-blue-400"
                rel="noopener noreferrer"
              >
@@ -888,7 +664,7 @@ export default function AuthPage() {
          </div>
        </div>
        <div className="mt-6 text-center text-xs text-gray-500 dark:text-gray-400 w-full">
-         © {new Date().getFullYear()} ASAFE Broker. Todos os direitos reservados.
+         © {new Date().getFullYear()} Apple Broker. Todos os direitos reservados.
        </div>
      </div>
    )

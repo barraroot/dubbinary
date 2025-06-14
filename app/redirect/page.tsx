@@ -56,7 +56,7 @@ export default function RedirectPage() {
             transition={{ duration: 0.5 }}
             className="flex justify-center mb-10"
           >
-            <Image src="asafebroker/logonormal.png" alt="ASAFE Broker" width={200} height={50} className="h-16 w-auto" />
+            <Image src="applebroker/logo_sem_fundo.png" alt="Apple Broker" width={200} height={50} className="h-16 w-auto" />
           </motion.div>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3, duration: 0.5 }}>
@@ -105,7 +105,7 @@ export default function RedirectPage() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
       >
-        © {new Date().getFullYear()} ASAFE Broker. Todos os direitos reservados.
+        © {new Date().getFullYear()} Apple Broker. Todos os direitos reservados.
       </motion.div>
     </div>
   )
