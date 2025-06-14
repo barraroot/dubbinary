@@ -36,6 +36,7 @@ export async function POST(request: NextRequest) {
       }, { status: error.response.status || 500 });
     } else if (error.request) {
       // A requisição foi feita mas não houve resposta
+      console.log(`${EXTERNAL_API_BASE_URL}/v1/auth`);
       return NextResponse.json({ 
         message: 'API externa não respondeu (Gateway Timeout).' 
       }, { status: 504 });
