@@ -194,7 +194,7 @@ export default function AuthPage() {
         const data = await response.json()
 
         if (response.ok) {
-          window.location.href = "https://traderoom.asafebroker.com/auth/external/" + data.token // Redireciona para a página de login após o registro
+          window.location.href = "https://traderoom.iatradex.com/auth/external/" + data.token // Redireciona para a página de login após o registro
           console.log("Registration successful:", data)
           // TODO: Handle successful registration (e.g., show success message, redirect)
         } else {
@@ -380,7 +380,7 @@ export default function AuthPage() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-950 p-6">
       <div className="w-full max-w-md flex flex-col items-center">
         <div className="flex justify-center mb-8 w-full">
-          <Image src="asafebroker/logomodelado_inverted.png" alt="ASAFE Broker" width={200} height={50} className="h-12 w-auto" />
+          <Image src="asafebroker/logomodelado_inverted.png" alt="IA Tradex" width={200} height={50} className="h-12 w-auto" />
         </div>
 
         <motion.div
@@ -888,7 +888,7 @@ export default function AuthPage() {
          </div>
        </div>
        <div className="mt-6 text-center text-xs text-gray-500 dark:text-gray-400 w-full">
-         © {new Date().getFullYear()} ASAFE Broker. Todos os direitos reservados.
+         © {new Date().getFullYear()} IA Tradex. Todos os direitos reservados.
        </div>
      </div>
    )

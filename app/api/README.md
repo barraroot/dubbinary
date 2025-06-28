@@ -1,4 +1,4 @@
-# API de Autenticação ASAFE Broker
+# API de Autenticação IA Tradex
 
 Esta API integrada ao Next.js serve como um intermediário para se comunicar com os endpoints de registro e autenticação de uma API externa (`https://backoffice.demo-corretora.com/api/v1`). Ela lida com o encaminhamento de requisições, adição de headers necessários (como o token de registro) e tratamento básico de erros.
 
