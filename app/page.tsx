@@ -342,7 +342,6 @@ export default function Home() {
             >
               <div className="flex justify-between items-center mb-8">
                 <Link href="/" className="flex items-center gap-2">
-                  <Image src="/icone-BudBinary-azul.png" alt="BudBinary" width={32} height={32} className="h-8 w-auto" />
                   <Image src="/logotipo_dolbbinari.png" alt="BudBinary" width={120} height={24} className="h-6 w-auto" />
                 </Link>
                 <button className="p-2 text-gray-700 dark:text-gray-300" onClick={() => setMobileMenuOpen(false)}>
@@ -472,7 +471,7 @@ export default function Home() {
               >
                 <div className="relative rounded-xl overflow-hidden shadow-2xl bg-gray-900">
                   <Image
-                    src="/BudBinary-traderoom.png"
+                    src="/background.png"
                     alt="BudBinary Trading Room"
                     width={1200}
                     height={800}

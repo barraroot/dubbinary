@@ -152,7 +152,6 @@ export default function MobileFallback() {
         <div className="flex items-center justify-between px-5 h-16">
           <Link href="/" className="flex items-center gap-2">
             <motion.div whileHover={{ rotate: 10 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-              <Image src="/icone-BudBinary-azul.png" alt="BudBinary" width={28} height={28} className="h-7 w-auto" />
             </motion.div>
             <Image src="/logotipo_dolbbinari.png" alt="BudBinary" width={120} height={24} className="h-6 w-auto dark:hidden" />
             <Image src="/logo-nextrade-branco.png" alt="BudBinary" width={120} height={24} className="h-6 w-auto hidden dark:block" />
@@ -179,7 +178,6 @@ export default function MobileFallback() {
           >
             <div className="flex justify-between items-center mb-8">
               <Link href="/" className="flex items-center gap-2">
-                <Image src="/icone-BudBinary-azul.png" alt="BudBinary" width={28} height={28} className="h-7 w-auto" />
                 <Image src="/logotipo_dolbbinari.png" alt="BudBinary" width={120} height={24} className="h-6 w-auto dark:hidden" />
                 <Image src="/logo-nextrade-branco.png" alt="BudBinary" width={120} height={24} className="h-6 w-auto hidden dark:block" />
               </Link>
@@ -284,7 +282,7 @@ export default function MobileFallback() {
             {/* Trading Platform Image */}
             <div className="relative rounded-xl overflow-hidden shadow-xl bg-gray-900 mt-10">
               <Image
-                src="/BudBinary-traderoom.png"
+                src="/background.png"
                 alt="BudBinary Trading Room"
                 width={1200}
                 height={800}
@@ -583,7 +581,6 @@ export default function MobileFallback() {
 
       <footer className="bg-gray-900 text-gray-400 py-8 px-5">
         <div className="flex items-center gap-2 mb-4">
-          <Image src="/icone-BudBinary-azul.png" alt="BudBinary" width={28} height={28} className="h-7 w-auto" />
           <Image src="/logo-nextrade-branco.png" alt="BudBinary" width={120} height={24} className="h-6 w-auto" />
         </div>
         <p className="text-xs mb-6">
